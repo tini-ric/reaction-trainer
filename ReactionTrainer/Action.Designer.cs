@@ -84,7 +84,7 @@
             lblAzione.Location = new Point(2, 283);
             lblAzione.MaximumSize = new Size(600, 600);
             lblAzione.Name = "lblAzione";
-            lblAzione.Size = new Size(596, 167);
+            lblAzione.Size = new Size(580, 128);
             lblAzione.TabIndex = 4;
             lblAzione.Text = "READY";
             lblAzione.TextAlign = ContentAlignment.MiddleCenter;
@@ -93,14 +93,13 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(584, 561);
-            ControlBox = false;
+            ClientSize = new Size(600, 600);
             Controls.Add(lblAzione);
             Controls.Add(lblIntervallo);
             Controls.Add(lblIntervalloLabel);
             Controls.Add(lblCountdown);
             Controls.Add(lblCountdownLabel);
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximumSize = new Size(600, 600);
             MinimumSize = new Size(600, 600);
             Name = "Action";

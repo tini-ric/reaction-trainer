@@ -14,6 +14,7 @@ public partial class Action: Form
 {
     private int remainingSeconds;
     private int interval;
+    private int firstInterval;
     private int remainingInterval;
     private string[] options = { "UP", "DOWN", "LEFT", "RIGHT" };
     private bool isFirst = true;
@@ -23,11 +24,11 @@ public partial class Action: Form
     {
         InitializeComponent();
 
-        remainingSeconds = durata;
+        remainingSeconds = durata+3;
         interval = intervallo;
-        remainingInterval = intervallo;
+        remainingInterval = 3;
 
-        lblIntervallo.Text = interval.ToString();
+        lblIntervallo.Text = remainingInterval.ToString();
 
         countdownTimer = new System.Windows.Forms.Timer();
         countdownTimer.Interval = 1000; // 1 secondo
@@ -50,7 +51,7 @@ public partial class Action: Form
             isFirst = false;
         }
 
-        if (remainingInterval == interval)
+        if (remainingInterval == interval && !isFirst)
         {
             Random rnd = new Random();
             int randomIndex = rnd.Next(options.Length);
