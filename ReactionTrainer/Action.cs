@@ -27,6 +27,17 @@ public partial class Action: Form
         this.KeyPreview = true;
         this.KeyDown += Action_KeyDown;
 
+        // Imposta lo sfondo nero
+        this.BackColor = Color.Black;
+
+        // Imposta il form a schermo intero
+        this.FormBorderStyle = FormBorderStyle.None; // Rimuove i bordi
+        this.WindowState = FormWindowState.Maximized; // Massimizza
+
+        lblCountdownLabel.ForeColor = Color.White;
+        lblIntervalloLabel.ForeColor = Color.White;
+        lblAzione.ForeColor = Color.White;
+
         remainingSeconds = durata+3;
         interval = intervallo;
         remainingInterval = 3;
@@ -63,7 +74,7 @@ public partial class Action: Form
         }
 
         lblCountdown.Text = $"{remainingSeconds}";
-        lblIntervallo.Text = $"{remainingInterval}";
+        lblIntervallo.Text = $"{remainingInterval}";    
 
         if (remainingSeconds <= 0)
         {

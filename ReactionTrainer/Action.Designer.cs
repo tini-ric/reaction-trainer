@@ -82,7 +82,6 @@
             lblAzione.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lblAzione.Font = new Font("Segoe UI", 72F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblAzione.Location = new Point(2, 283);
-            lblAzione.MaximumSize = new Size(600, 600);
             lblAzione.Name = "lblAzione";
             lblAzione.Size = new Size(580, 128);
             lblAzione.TabIndex = 4;
@@ -93,14 +92,13 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(600, 600);
+            ClientSize = new Size(584, 561);
             Controls.Add(lblAzione);
             Controls.Add(lblIntervallo);
             Controls.Add(lblIntervalloLabel);
             Controls.Add(lblCountdown);
             Controls.Add(lblCountdownLabel);
             FormBorderStyle = FormBorderStyle.FixedSingle;
-            MaximumSize = new Size(600, 600);
             MinimumSize = new Size(600, 600);
             Name = "Action";
             Text = "Action";
