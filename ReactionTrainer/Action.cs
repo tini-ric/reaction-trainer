@@ -24,6 +24,9 @@ public partial class Action: Form
     {
         InitializeComponent();
 
+        this.KeyPreview = true;
+        this.KeyDown += Action_KeyDown;
+
         remainingSeconds = durata+3;
         interval = intervallo;
         remainingInterval = 3;
@@ -67,6 +70,14 @@ public partial class Action: Form
             countdownTimer.Stop();
             MessageBox.Show("Countdown terminato!");
             this.Close(); // opzionale: chiudi il form
+        }
+    }
+
+    private void Action_KeyDown(object sender, KeyEventArgs e)
+    {
+        if (e.KeyCode == Keys.Escape)
+        {
+            this.Close();
         }
     }
 }
