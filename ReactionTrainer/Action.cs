@@ -88,6 +88,8 @@ public partial class Action: Form
     {
         if (e.KeyCode == Keys.Escape)
         {
+            countdownTimer.Stop();  // Ferma il timer
+            countdownTimer.Dispose(); // Opzionale: libera risorse
             this.Close();
         }
     }
