@@ -34,6 +34,7 @@
             lblDurata = new Label();
             lblDurata2 = new Label();
             txtDurata = new TextBox();
+            btnInizio = new Button();
             SuspendLayout();
             // 
             // lblIntervallo
@@ -90,11 +91,21 @@
             txtDurata.Size = new Size(42, 23);
             txtDurata.TabIndex = 5;
             // 
+            // btnInizio
+            // 
+            btnInizio.Location = new Point(143, 175);
+            btnInizio.Name = "btnInizio";
+            btnInizio.Size = new Size(130, 58);
+            btnInizio.TabIndex = 6;
+            btnInizio.Text = "START";
+            btnInizio.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(412, 245);
+            Controls.Add(btnInizio);
             Controls.Add(txtDurata);
             Controls.Add(lblDurata2);
             Controls.Add(lblDurata);
@@ -115,5 +126,6 @@
         private Label lblDurata;
         private Label lblDurata2;
         private TextBox txtDurata;
+        private Button btnInizio;
     }
 }
