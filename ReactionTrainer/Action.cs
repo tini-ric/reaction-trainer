@@ -15,6 +15,8 @@ public partial class Action: Form
     private int remainingSeconds;
     private int interval;
     private int remainingInterval;
+    private string[] options = { "UP", "DOWN", "LEFT", "RIGHT" };
+    private bool isFirst = true;
     private System.Windows.Forms.Timer countdownTimer;
 
     public Action(int durata, int intervallo)
@@ -37,10 +39,24 @@ public partial class Action: Form
 
     private void CountdownTimer_Tick(object sender, EventArgs e)
     {
+        if (isFirst) lblAzione.Text = "READY";
+
         remainingSeconds--;
         remainingInterval--;
 
-        if (remainingInterval == 0) remainingInterval = interval;
+        if (remainingInterval == 0)
+        {
+            remainingInterval = interval;
+            isFirst = false;
+        }
+
+        if (remainingInterval == interval)
+        {
+            Random rnd = new Random();
+            int randomIndex = rnd.Next(options.Length);
+            string action = options[randomIndex];
+            lblAzione.Text = action;
+        }
 
         lblCountdown.Text = $"{remainingSeconds}";
         lblIntervallo.Text = $"{remainingInterval}";

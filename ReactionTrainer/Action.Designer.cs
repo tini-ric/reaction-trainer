@@ -32,6 +32,7 @@
             lblCountdown = new Label();
             lblIntervalloLabel = new Label();
             lblIntervallo = new Label();
+            lblAzione = new Label();
             SuspendLayout();
             // 
             // lblCountdownLabel
@@ -76,15 +77,30 @@
             lblIntervallo.TabIndex = 3;
             lblIntervallo.Text = "N/A";
             // 
+            // lblAzione
+            // 
+            lblAzione.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            lblAzione.Font = new Font("Segoe UI", 72F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblAzione.Location = new Point(2, 283);
+            lblAzione.MaximumSize = new Size(600, 600);
+            lblAzione.Name = "lblAzione";
+            lblAzione.Size = new Size(596, 167);
+            lblAzione.TabIndex = 4;
+            lblAzione.Text = "READY";
+            lblAzione.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // Action
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(584, 561);
+            ControlBox = false;
+            Controls.Add(lblAzione);
             Controls.Add(lblIntervallo);
             Controls.Add(lblIntervalloLabel);
             Controls.Add(lblCountdown);
             Controls.Add(lblCountdownLabel);
+            FormBorderStyle = FormBorderStyle.None;
             MaximumSize = new Size(600, 600);
             MinimumSize = new Size(600, 600);
             Name = "Action";
@@ -99,5 +115,6 @@
         private Label lblCountdown;
         private Label lblIntervalloLabel;
         private Label lblIntervallo;
+        private Label lblAzione;
     }
 }
